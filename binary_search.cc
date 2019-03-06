@@ -12,7 +12,7 @@ const int SIZE = 16;
 int main()
 {
 	int found, value;
-	int array[] = {34,19,19,18,17,13,12,12,12,11,9,5,3,2,2,0}; 
+	int array[] = {0,2,2,3,5,9,11,12,12,12,13,17,18,19,19,34}; 
                      // array to be searched
 	
 	cout << "Enter an integer to search for:" << endl;
@@ -57,7 +57,7 @@ int binarySearch(int array[],int numElems,int value) //function heading
 	if (array[middle] == value)
 		return middle;	     // if value is in the middle, we are done
 	                                 
-	else if (array[middle]<value)
+	else if (array[middle] > value)
 		last = middle - 1;	    // toss out the second remaining half of
 					    // the array and search the first 
 	else
